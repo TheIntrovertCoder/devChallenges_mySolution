@@ -1,0 +1,49 @@
+//- Learn pug - https://pugjs.org/
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        link(rel="stylesheet" href="./assets/images/devchallenges.png")
+        link(rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/")
+
+        title My Team
+        link(rel="stylesheet" href="./dist/styles/styles.css")
+
+    body
+        .wrapper
+
+            header.header
+
+                .header__title
+                    h1.header__title-title The creative crew
+
+                .header__textSection 
+                    h2.header__textSection-title Who we are
+                    p.header__textSection-description We are team of creatively diverse. drivern. innovative individuals working in various locations from the world.
+
+            main.main
+                - 
+                    var team = [
+                        {img: "./assets/images/photo1.png", name: "Bill Mahoney", role: "Product owner"},
+                        {img: "./assets/images/photo2.png", name: "Saba Cabrera", role: "Art Designer"}, 
+                        {img: "./assets/images/photo3.png", name: "Shae Le", role: "Tech Lead"},
+                        {img: "./assets/images/photo4.png", name: "Skylah Le", role: "UX Designer"},
+                        {img: "./assets/images/photo5.png", name: "Griff Richards", role: "Developer"},
+                        {img: "./assets/images/photo6.png", name: "Stan John", role: "Developer"}
+                    ] 
+
+                each member, index in team
+                    figure.main__img-container
+                        img.main__img-container-img(src= member.img, alt="Team member " + member.name)
+                        figcaption.main__img-container-bottomText= member.name
+                        h5.main__img-container-rightText= member.role 
+
+            footer.footer 
+                p.footer__text 
+                    | Created by 
+                    a(href="https://www.github.com/TheIntrovertCoder") @TheIntrovertCoder 
+                    | - 
+                    a(href="https://www.devChallenges.io") devChllenges.io

@@ -1,0 +1,151 @@
+//  Contents     -   line number
+//  Misc         -       9
+//  Header       -       18 
+//  Main         -       44
+//  Footer       -       79
+//  Animations   -       89
+
+// #misc    
+.wrapper
+    max-width: 62.5rem
+    margin-inline: auto
+    padding-top: 6.25rem
+    display: grid
+    grid-template-rows: repeat(3, auto)
+    row-gap: 2rem
+
+// #header
+.header
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    &__title-title
+        font-family: "PTSerif-Bold"
+        font-size: 2.25rem
+        line-height: 3rem
+        letter-spacing: -0.045em
+
+    &__textSection
+
+        &-title, &-description
+            line-height: 1.6875rem
+            font-size: 1.125rem
+
+        &-title
+            font-family: "Poppins-SemiBold"
+            text-transform: uppercase
+
+        &-description
+            max-width: 31.25rem
+            width: auto
+            font-family: "Poppins-Regular"
+
+// #main
+.main
+    display: grid
+    grid-template-columns: repeat(3, auto)
+
+    :nth-child(2), :nth-child(5)
+        margin-top: 6rem
+
+    &__img-container
+        position: relative
+        padding-right: .5rem
+
+        &-img
+            max-height: 21.3125rem
+            max-width: 14.875rem
+            height: auto
+            width: auto
+
+        &-bottomText
+            margin-top: 1rem !important
+            font-family: "Poppins-SemiBold"
+            font-size: 1.125rem
+            line-height: 1.6875rem
+
+        &-rightText
+            position: absolute
+            top: 3.9rem
+            left: 10rem
+            transform: rotate(90deg)
+            width: 11.25rem
+            font-family: "PTSerif-Regular"
+            font-size: 0.75rem
+            line-height: 1rem
+            text-transform: uppercase
+
+// #footer
+.footer
+    text-align: center
+    font-family: "Montserrat-Bold"
+    font-size: 0.875rem
+    line-height: 1.0625rem
+
+    &__text, a:any-link
+        text-decoration: none
+
+// #animations
+
+.main__img-container
+    transform: scale3d(1, 1, 1)
+    transition: transform .5s
+
+    &:hover
+
+        transform: scale3d(1.05, 1.05, 1.05)
+        transition: transform .5s
+    &-img
+        animation: slide-up 1s
+
+    &-bottomText
+        opacity: 0
+        animation: fadein 1s forwards
+        animation-delay: .5s
+
+    &-rightText
+        opacity: 0
+        animation: slidein-left 1s forwards
+
+@keyframes slide-up
+    0%
+        transform: translateY(3.125rem)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes slidein-left
+    from
+        transform: translateX(-0.625rem)
+        opacity: 0
+
+    to
+        transform: translateX(0)
+        transform: rotate(90deg)
+        opacity: 1
+
+@keyframes fadein
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+.footer a
+    position: relative
+
+    &::after
+        content: ""
+        height: 0.125rem
+        width: 100%
+        position: absolute
+        display: inline-flex
+        left: 0
+        bottom: -0.25rem
+        transform: scaleX(0)
+        transition: transform 1s
+        background-color: black
+
+    &:hover::after
+        transform: scaleX(1)
+        transition: transform .7s

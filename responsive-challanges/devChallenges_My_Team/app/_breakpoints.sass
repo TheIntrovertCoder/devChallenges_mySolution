@@ -1,0 +1,27 @@
+@media screen and ( max-width: 767.9px )
+    .header
+        grid-template-columns: 1fr
+        margin-inline: 1rem
+
+        &__textSection-description
+            max-width: 20rem
+
+    .main
+        grid-template-columns: repeat(2,auto)
+        grid-template-rows: repeat(6, 1f)
+
+        &__img-container
+            margin-inline: auto
+
+            &-img
+                width: 138,4.5rem
+                height: 13.0625rem
+
+            &-rightText
+                left: 4.5rem
+
+        :nth-child(5)
+            margin-top: 1.2512rem
+
+        :nth-child(2), :nth-child(4), :nth-child(6)
+            margin-top: 5rem
