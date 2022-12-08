@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/TheIntrovertCoder/devChallenges_mySolution/tree/main/responsive-challanges/devChallenges_My_Team">
+    <a href="https://github.com/TheIntrovertCoder/devChallenges_mySolution/tree/main/responsive-challanges/My-Team">
       Solution
     </a>
     <span> | </span>
