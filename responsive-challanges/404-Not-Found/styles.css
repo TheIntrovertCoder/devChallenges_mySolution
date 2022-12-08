@@ -1,0 +1,229 @@
+@import "./fonts/fonts.css";
+
+/* Contents */
+/* Tip: prefix '#' with section title to go to that section */
+/* i.e #breakpoints to go to breakpoints section */
+
+/*
+    section     -  line number
+    
+    Reset       -  22 
+    Repeating   -  41 
+    Misc        -  61
+    Header      -  70 
+    Main        -  77 
+    Footer      -  121
+    Fonts       -  132
+    colors      -  162
+    Breakpoints -  187
+
+*/
+
+/* Reset #reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a:any-link {
+    text-decoration: none;
+}
+
+/* End Reset */
+
+/* Repeating values #repeating */
+
+.main__textSection-title,
+.main__textSection-description,
+.main__textSection-cta {
+    letter-spacing: -0.035em;
+}
+
+.header__text,
+.main__textSection-cta {
+    text-transform: uppercase;
+}
+
+.header__text,
+.main__textSection-description {
+    font-size: 1.5rem;
+}
+
+/* End Repeating values */
+
+/* Misc #misc */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 4.8125rem 0.625rem;
+}
+/* End Misc */
+
+/* Header #header */
+.header__text {
+    line-height: 1.5625rem;
+    letter-spacing: -0.08em;
+}
+/* End Heder */
+
+/* Main #main */
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main__imgContainer {
+    height: fit-content;
+    width: fit-content;
+}
+
+.main__imgContainer-img {
+    max-height: 25.8906rem;
+    max-width: 33.7013rem;
+    height: auto;
+    width: 100%;
+}
+
+.main__textSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main__textSection-title {
+    font-size: 4rem;
+    line-height: 5.9375rem;
+    color: rgb(51, 51, 51);
+}
+
+.main__textSection-description {
+    line-height: 2.25rem;
+}
+
+.main__textSection-cta {
+    height: 4.25rem;
+    width: 13.5rem;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    border: none;
+    margin-top: 2rem;
+}
+/* End Main */
+
+/* Footer #footer */
+.footer {
+    text-align: center;
+}
+
+.footer__text {
+    line-height: 1.0625rem;
+    font-size: 0.875rem;
+}
+/* End Footer */
+
+/* Font #fonts */
+
+.header__text {
+    font-family: "Inconsolate-Bold";
+}
+
+.main__textSection-title {
+    font-family: "SpaceMono-Bold";
+}
+
+.main__textSection-description {
+    font-family: "SpaceMono-Regular";
+}
+
+.main__textSection-cta {
+    font-family: "MonoSpace-Regular";
+}
+
+.footer {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.footer__text,
+a {
+    font-family: "Montserrat-Bold";
+}
+
+/* End Fonts */
+
+/* Colors #colors */
+.header__text {
+    color: rgb(51, 51, 51);
+}
+
+.main__textSection-title {
+    color: rgb(51, 51, 51);
+}
+
+.main__textSection-description {
+    color: rgb(79, 79, 79);
+}
+
+.main__textSection-cta {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+}
+
+.footer__text,
+.footer a {
+    color: rgb(189, 189, 189);
+}
+
+/* End Colors */
+
+/* Breakpoints #breakpoints */
+
+@media (max-width: 767.9px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 24px 10px 24px;
+    }
+    .header__text {
+        font-size: 1.5rem;
+        line-height: 1.5625rem;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main__imgContainer-img {
+        height: 13.7719rem;
+        width: 17.9269rem;
+    }
+
+    .main__textSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main__textSection-title {
+        font-size: 3rem;
+        line-height: 4.4375rem;
+    }
+
+    .main__textSection-description {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+}
+
+/* Breakpoints */
