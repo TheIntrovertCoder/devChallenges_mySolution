@@ -218,6 +218,14 @@
   color: rgb(169, 169, 169);
 }
 
+@media (max-width: 379.9px) {
+  .main {
+    grid-template-columns: 1fr !important;
+  }
+  .main :nth-child(2), .main :nth-child(5) {
+    margin-top: auto;
+  }
+}
 @media screen and (max-width: 767.9px) {
   .header {
     grid-template-columns: 1fr;
