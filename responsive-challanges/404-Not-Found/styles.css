@@ -227,3 +227,59 @@ a {
 }
 
 /* Breakpoints */
+
+/* Animations */
+
+.main__textSection-cta {
+    transition: all 0.5s;
+    position: relative;
+}
+
+.main__textSection-cta:hover {
+    transform: scale3d(1.04, 1.04, 1.04);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition: background-color .5s;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4);
+}
+
+.main__textSection-cta:active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1);
+}
+
+.footer a {
+    position: relative;
+}
+
+.myLink::after {
+    content: "@TheIntrovertCoder";
+}
+
+.devChallengesLink::after {
+    content: "devChallenges.io";
+}
+
+.footer a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    transition: all 0.5s;
+}
+
+.footer a:hover::after {
+    animation: text-wipe 0.5s steps(60, end);
+    color: black;
+    width: 100%;
+}
+
+@keyframes text-wipe {
+    from {
+        width: 0;
+    }
+}
+
+/* End Animations */
